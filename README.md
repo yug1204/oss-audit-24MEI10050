@@ -1,38 +1,33 @@
-# The Open Source Audit: Python
-**Student Name:** Yug Wankhede  
-**Registration Number:** 24MEI10050  
-**Chosen Software:** Python  
+# Python: Open Source Audit Project
 
-## Project Overview
-This repository contains five shell scripts developed for the OSS NGMC Capstone Project. These scripts demonstrate practical Linux command-line skills, system auditing, and automation principles aligned with open-source philosophies.
+This repository contains five shell scripts and a comprehensive report outline covering the "Open Source Audit" capstone project for the chosen open source software: **Python**.
+
+## Developer Information
+- **Student Name**: Yug Anil Wankhede
+- **Registration Number**: 24MEI10050
+- **Chosen Software**: Python
+
+## Project Shell Scripts
+All scripts are designed to run on a standard Linux environment.
+
+1. **`sys_identity.sh`**: Displays system information including kernel version, OS distro, logged-in user, and uptime using basic variables and command substitution.
+2. **`package_inspector.sh`**: Checks if `python3` is installed using package managers (`dpkg` or `rpm`) and utilizes a `case` statement to echo a philosophical description of various FOSS packages.
+3. **`disk_auditor.sh`**: Iterates through an array of directories calculating size and permissions via `ls -ld`, `awk`, and `du` commands.
+4. **`log_analyzer.sh`**: Reads a log file iteratively using a `while read` loop to count keyword occurrences (e.g., 'error') and displays the last 5 matching strings.
+5. **`manifesto.sh`**: Interactively asks the user three questions to generate a custom Open Source Philosophy manifesto, writing it directly into a newly created `.txt` file.
+
+## Instructions to Run
+1. Clone this repository locally or navigate into this folder on your Linux terminal.
+2. Grant absolute execution privileges to all files:
+   ```bash
+   chmod +x *.sh
+   ```
+3. Run any file using `./script_name.sh`. For example:
+   ```bash
+   ./sys_identity.sh
+   ```
+*(Note: Script 4 (`log_analyzer.sh`) requires a file path argument, for example: `./log_analyzer.sh /var/log/syslog error`).*
 
 ## Dependencies
-To run these scripts, you will need:
-* A Linux environment (Ubuntu/Debian recommended)
-* `bash` shell
-* Standard GNU coreutils (`awk`, `grep`, `df`, `ls`)
-* Python 3 installed (`sudo apt install python3`)
-
-## Script Descriptions & Execution
-First, make all scripts executable by running: 
-`chmod +x *.sh`
-
-### Script 1: System Identity Report (`script1.sh`)
-Displays a welcome screen with the OS details, kernel version, current user, uptime, and the open-source license governing the OS.
-* **To run:** `./script1.sh`
-
-### Script 2: FOSS Package Inspector (`script2.sh`)
-Checks if a specified FOSS package (defaulting to Python) is installed, retrieves its version, and outputs a one-line philosophical description of the software.
-* **To run:** `./script2.sh python3`
-
-### Script 3: Disk and Permission Auditor (`script3.sh`)
-Loops through critical system directories (like `/etc`, `/var/log`) and the software's config directory to report disk usage, ownership, and permissions.
-* **To run:** `./script3.sh`
-
-### Script 4: Log File Analyzer (`script4.sh`)
-Reads a system log file line-by-line, counts the occurrences of a specific keyword (default: "error"), and outputs a summary.
-* **To run:** `sudo ./script4.sh /var/log/syslog error`
-
-### Script 5: Open Source Manifesto Generator (`script5.sh`)
-An interactive script that asks the user three questions about their views on software freedom and generates a personalized text file manifesto.
-* **To run:** `./script5.sh`
+- Standard Bash shell (`/bin/bash`).
+- Common Linux utilities: `awk`, `cut`, `grep`, `tail`, `dpkg` or `rpm`, `du`. No extra installation required out-of-the-box on mainstream distributions.
