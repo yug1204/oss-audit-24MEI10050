@@ -1,7 +1,6 @@
 # Python: Open Source Audit Project
 
-This repository contains five shell scripts and a comprehensive report outline covering the "Open Source Audit" capstone project for the chosen open source software: **Python**.
-
+This is my submission for the Open Source Audit Capstone Project. I audited Python, exploring its problem-solving origins, the PSF permissive license, and its ethical FOSS standing. The submission includes a detailed report comparing Python to proprietary alternatives (like MATLAB), alongside 5 practical Linux bash scripts demonstrating system auditing, package inspection, log analysis, and interactive manifesto generation.
 ## Developer Information
 - **Student Name**: Yug Anil Wankhede
 - **Registration Number**: 24MEI10050
